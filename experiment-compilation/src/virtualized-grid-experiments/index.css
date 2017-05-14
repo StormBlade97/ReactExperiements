@@ -14,12 +14,6 @@ div.drag-handle:hover {
   transform: scaleY(2.5);
 }
 
-.header-cell {
-  cursor: pointer;
-  overflow: visible !important;
-  user-select: none;
-  transition: transform 0.2s linear !important;
-}
 .cell {
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
@@ -33,6 +27,12 @@ div.drag-handle:hover {
   white-space: nowrap;
   text-overflow: ellipsis;
   transition: all 0.5s ease;
+}
+.header-cell {
+  cursor: pointer;
+  overflow: visible !important;
+  user-select: none;
+  transition: transform ease;
 }
 .column-even {
   background-color: rgba(0,0,0, 0.1);

@@ -35,7 +35,7 @@ const Item = ({columnIndex, className, rowIndex, key, style, content, parent, on
     className={`cell ${columnIndex % 2 === 0 ? 'column-even' : ''} ${className}`}
     style={style}
     {...rest}
-    //onDragStart={(e) => e.preventDefault()}
+    onDragStart={(e) => e.preventDefault()}
   >
     <Resizer onResize={onResize}/>
     <DragHandle />
@@ -190,6 +190,7 @@ class EditableSortableVirtualizedGrid extends PureComponent {
                       cellRenderer={this.bodyCellRenderer}
                       width={width}
                       onScroll={onScroll}
+                      scrollLeft={scrollLeft}
                     />
                   </div>)
                 }
